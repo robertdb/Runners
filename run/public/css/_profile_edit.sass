@@ -1,0 +1,53 @@
+@import _colors.sass
+
+.container-edit
+  display: flex
+  flex-flow: column wrap
+  width: 90%
+  margin: 0 auto
+  margin-top: 70px
+  background-color: $primary-color
+
+.form-edit-profile
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  margin: 0 auto
+  &
+    text-align: center
+  #submit-edit-profile
+    color:#fff
+    background-color: rgb(240, 20, 20)
+    border: 0
+    border-radius: 5px
+    margin-left: -10px
+    margin-bottom: 10px
+    align-self: center
+
+  .user-experience-edit
+    h4
+      text-align: center
+    .text-form
+      width: 70%
+#edit-img
+  margin-top: 10px
+.inputfile
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+
+.inputfile + label
+    margin-left: -20px
+    display: inline-block
+    font-size: 12px
+
+.inputfile + label
+	cursor: pointer
+
+
+.inputfile:focus + label,
+.inputfile + label:hover
+    background-color: $background-color

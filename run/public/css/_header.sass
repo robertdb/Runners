@@ -1,0 +1,109 @@
+@import _colors.sass
+@import _mixins.sass
+// Logo
+#logo
+  position: fixed
+  z-index: 30
+  top: 10px
+  left: 10px
+  height: 35px
+
+
+//<-- NAV SMARPHONE AND TABLE
+header
+  border-bottom: 1px solid rgb(217, 217, 217)
+
+
+.flex-nav-container
+  position: fixed
+  top: 50
+  z-index: 1
+  width: 100%
+  background: $primary-color
+  list-style-type: none
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  border-bottom: 1px solid rgb(217, 217, 217)
+
+@include tablet
+// keep icons
+@include desktop
+  header
+    border-bottom: none
+  .flex-nav-container
+    display: none
+  .icon-nav
+    visibility: hidden
+.icon-nav
+  width: 50px
+//-->
+
+
+// Header
+#menu-icon
+  width: 48px
+  height: 48px
+  margin-top: 3px
+  margin-left: 2px
+header
+  width: 100%
+  background: $primary-color
+  position: fixed
+  z-index: 20
+  top: 0
+#btn-menu
+  display: none
+
+header label
+  display: none
+  width: 55px
+  height: auto
+
+header label:hover
+  cursor: pointer
+  background: $primary-color
+
+.menu ul
+  margin: 0
+  list-style: none
+  padding: 0
+  display: flex
+  justify-content: flex-end
+
+.menu li:hover
+  background: rgba(209, 205, 205, 0.3)
+.menu li a
+  display: block
+  padding: 15px 20px
+  color: #000000
+  text-decoration: none
+
+@media (max-width:800px)
+  #logo
+    left: 60px
+  header
+    height: 55px
+  header label
+    display: block
+
+  .menu
+    position: absolute
+    z-index: 2
+    top: 55px
+    background: rgba(245, 245, 247,1)
+    width: 100%
+    margin-left: -100%
+    transition: all 0.5s
+    z-index: 1000
+
+  .menu ul
+    flex-direction: column
+
+  .menu li
+    border-top:  1px solid #dbdbdb
+
+  #btn-menu:checked ~ .menu
+    margin: 0
+
+// Header END

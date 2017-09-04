@@ -1,0 +1,77 @@
+// imports..
+@import _colors.sass
+
+
+.container-profile
+  display: flex
+  flex-flow: column
+  width: 80%
+  background-color: $primary-color
+  margin: 20px auto
+  position: relative
+  margin-top: 70px
+  z-index: 0
+
+
+.user-profile-img
+  min-width: 200px
+  min-height: 200px
+  width: 200px
+  height: 200px
+  border-radius: 100px
+  margin-top: 10px
+  align-self: center
+
+
+.user-info-personal
+  margin: 0 auto
+  margin-top: 20px
+#box-edit
+  position: absolute
+  right: 5
+  top: 6
+.user-profile-edit
+  width: 25px
+  height: 25px
+  opacity: 0.7
+
+.user-experience
+  width: 80%
+  margin: 0 auto
+  margin-top: 20px
+  display: flex
+  flex-flow: column wrap
+  align-content: center
+.title-experience
+  text-align: center
+
+// Desktop
+
+@include desktop
+  .container-profile
+    width: 70%
+    flex-flow: row wrap
+    margin: 0 auto
+    margin-top: 20px
+
+  .user-profile-img
+    margin-top: 10px
+    margin-left: 20px
+  .user-info-personal
+    margin: 0
+    margin-left: 50px
+    align-self: center
+  .user-experience
+    width: 80%
+    margin: 0
+    margin-top: 20px
+    display: block
+    margin-left: 20px
+  .title-experience
+    text-align: left
+
+
+.edit-img
+  background-color: rgb(254, 254, 254)
+  margin-left: 150px
+  margin-right: 150px
