@@ -29,6 +29,26 @@ class PostController extends Controller
 
   public function edit(Request $request)
   {
-    return dd($request->all());
+    $this->validate($request, [
+        'body' => 'required'
+    ]);
+    $post = Post::find($request['postId']);
+    /*$user= User::find($post->user_id);
+    if (Auth::user() != $user) {
+        return redirect()->back();
+    }*/
+    $post->body = $request['body'];
+    $post->save();
+    return $request;
+  }
+
+  public function delete($id)
+  {
+    $post = Post::where('id', $id)->first();
+    /*if (Auth::user() != $post->user) {
+        return redirect()->back();
+    }*/
+    $post->delete();
+    return redirect()->route('home');
   }
 }

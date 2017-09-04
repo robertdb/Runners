@@ -34,7 +34,7 @@
         <ul style="list-style:none; display:flex; flex-flow: row">
           <li><a class="edit" href="{{ route('post.edit', ['id' => $post->id]) }}">Editar</a></li>
           <li>|</li>
-          <li><a href="#">Borrar</a></li>
+          <li><a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Borrar</a></li>
         </ul>
       @endif
     </article>
@@ -71,5 +71,4 @@
 
 <script>
     var token = '{{ Session::token() }}';
-    var urlEdit = '{{ route('post.edit') }}';
 </script>

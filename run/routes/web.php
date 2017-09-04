@@ -24,16 +24,24 @@ Route::get('/home', [
     'middleware' => 'auth'
 ]);
 
-Route::post('/post', [
+Route::post('/posts', [
     'uses' => 'PostController@store',
     'as' => 'post.create',
     'middleware' => 'auth'
 ]);
 
-Route::put('/edit', [
+Route::put('/posts/edit', [
     'uses' => 'PostController@edit',
     'as' => 'post.edit'
 ]);
+
+Route::get('/posts/{post_id}/delete', [
+    'uses' => 'PostController@delete',
+    'as' => 'post.delete',
+    'middleware' => 'auth'
+]);
+
+
 
 // ruta harcodeada, va recibir un id de usuario
 Route::get('/profile', function () {
