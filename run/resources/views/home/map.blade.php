@@ -1,3 +1,5 @@
 <section class="item-map">
-  <img id="map" src="img/map-example.png" alt="">
+  <div id="map">
+
+  </div>
 </section>
