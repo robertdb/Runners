@@ -1,7 +1,7 @@
-<a href="/home"><img id ="logo" src="img/logo.png" alt=""></a>
+<a href="{{ route('home') }}"><img id ="logo" src="{{ asset('img/logo.png') }}" alt=""></a>
 <header>
   <input type="checkbox" id="btn-menu" name="" value="">
-  <label for="btn-menu" for=""><img id="menu-icon"  src="img/icons/menu-icon.png" alt=""></label>
+  <label for="btn-menu" for=""><img id="menu-icon"  src="{{ asset('img/icons/menu-icon.png') }}" alt=""></label>
   <nav class="menu">
     <ul>
 
@@ -9,8 +9,8 @@
           <li><a href="{{ route('login') }}">Ingresar</a></li>
           <li><a href="{{ route('register') }}">Registrase</a></li>
       @else
-        <li><a href="/home">Inicio</a></li>
-        <li><a href="carreras.html">Carreras</a></li>
+        <li><a href="{{ route('home') }}">Inicio</a></li>
+        <li><a href="{{ route('races') }}">Carreras</a></li>
         <li><a href="amigos.html">Amigos</a></li>
         <li><a href="/profile">Perfil</a></li>
         <li><a href="faq.html">FAQ</a></li>
@@ -40,12 +40,12 @@
 
 <div class="flex-nav-container">
   <div class="flex-item">
-    <a class="section-mobile" href="index.html"><img  class="icon-nav"src="img/home.png" alt=""></a>
+    <a class="section-mobile" href="{{ route('home') }}"><img  class="icon-nav"src="{{ asset('img/home.png') }}" alt=""></a>
   </div>
   <div class="flex-item">
-    <a class="section-mobile" href="#"><img  class="icon-nav" src="img/marathons-map.png" alt=""></a>
+    <a class="section-mobile" href="{{ route('races') }}"><img  class="icon-nav" src="{{ asset('img/marathons-map.png') }}" alt=""></a>
   </div>
   <div class="flex-item">
-    <a class="section-mobile" href="/profile"><img  class="icon-nav" src="img/profile.png" alt=""></a>
+    <a class="section-mobile" href="/profile"><img  class="icon-nav" src="{{ asset('img/profile.png') }}" alt=""></a>
   </div>
 </div>

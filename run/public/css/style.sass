@@ -19,175 +19,22 @@ body
   border-bottom: 1px solid #e7e7e7
   width: 100%
 
+// home code
+@import _home.sass
 
-// SECTIONS EVENTS-postS-MAP
-// Mobile first
-.container-flex
-  margin-top: 10px
-  margin-left: 0px
-  display: flex
-  flex-flow: row
-  align-items: center
-  .item-events
-    display: none
-  .item-posts
-    width: 100%
-    background-color: $primary-color
-    display: flex
-    flex-flow: column
-    align-items: center
-    margin-top: 60px
-    //create  post style
-    .create-post
-      margin-top: 20px
-      display: flex
-      width: 95%
-      background-color: $background-color
-    .user-img
-      min-width: 50px
-      min-height: 50px
-      width: 50px
-      height: 50px
-      border-radius: 50px
-      margin-top: 5px
-      margin-left: 5px
-    .form-post
-      display: flex
-      flex-flow: row wrap
-      justify-content: space-between
-      margin-left: 10px
-      margin-top: 10px
-      margin-right: 10px
-      width: 100%
-      .text-form
-        border-radius: 5px
-        border-width: 1px
-        border-style: solid
-        border-color: rgb(166, 166, 166)
-        outline: none
-        margin-bottom: 10px
-        width: 100%
-      #form-files
-        position: relative
-        width: 100px
-      #btn_file
-        position: absolute
-        z-index: 0
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
-        width: 100%
-        height: 100%
-        opacity: 0
-      #submit-post
-        color: #FFF
-        background: rgb(237, 21, 21)
-        border: none
-        border-radius: 5px
-        margin-bottom: 10px
-    //create post style END
-    // post style
-    .post-container-flex
-      width: 95%
-      height: 150px
-      margin: 10px
-      background-color: $background-color
-      display: flex
-      height: auto
-    .detail-post
-      margin-left: 10px
-      display: flex
-      flex-flow: row wrap
-      margin-right: 10px
-      .user-info-post
-        width: 100%
-      .comments-post
-        height: auto
-      .comment-post
-        display: flex
-        background-color: $primary-color
-        margin-top: 10px
-        margin-bottom: 10px
-        .detail-comment-post
-          margin-left: 10px
-          display: flex
-          flex-flow: row wrap
-      .text-comment-post
-        margin-left: 10px
+// races
+@import _races.sass
 
 
-.item-map
-  display: none
-  #map
-    display: none
 
-@include tablet
-  .container-flex
-    .item-events
-      display: none
-    .item-posts
-      width: 100%
-      background-color: $primary-color
-      display: flex
-      flex-flow: column
-      align-items: center
-      // post style
-      .post
-        width: 95%
-        height: 150px
-        margin: 10px
-        background-color: $background-color
 
-@include desktop
-  .container-flex
-    width: 70%
-    align-items: flex-start
-    .item-events
-      flex: 1 1 auto
-      padding: 10px
-      margin: 10px
-      background-color: $primary-color
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-      .create-event
-        background-color: $background-color
-      .my-events
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        margin-top: 10px
-        .event
-          margin-top: 10px
-          background-color: $background-color
-    .item-posts
-      flex: 1 1 100%
-      background-color: $primary-color
-      padding: 10px
-      margin: 10px
 
-      // post style
-      .post
-        height: 150px
-        margin: 10px
-        background-color: $background-color
-  .item-map
-    display: block
-    position: fixed
-    right: 0px
-    top: 50px
-    width: 30%
-    height: 600px
-    // map style
-    background-color: $primary-color
-    #map
-      display: inline-block
-      width: 100%
-      height: 100%
-// DE ACA PARA ABAJO ES ESTILO PARA REGISTRACIÓN Y LOGIN -EN PROCESO- //
-@import _register_login.sass
+
+// not using for now
+//@import _register_login.sass
 
 // Profile
 @import _profile.sass
+
+// not yet in laravel
 @import _profile_edit.sass

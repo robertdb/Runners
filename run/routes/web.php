@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+/******* Posts *************/
 Route::get('/home', [
     'uses' => 'PostController@index',
     'as' => 'home',
@@ -41,8 +41,21 @@ Route::get('/posts/{post_id}/delete', [
     'middleware' => 'auth'
 ]);
 
+/******* Races *************/
+Route::get('/races', [
+    'uses' => 'RaceController@index',
+    'as' => 'races',
+    'middleware' => 'auth'
+]);
+
+Route::get('/races/{id}', [
+    'uses' => 'RaceController@showRace',
+    'as' => 'race',
+    'middleware' => 'auth'
+]);
 
 
+/******* Profile *************/
 // ruta harcodeada, va recibir un id de usuario
 Route::get('/profile', function () {
     return view('profile');
