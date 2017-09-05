@@ -1,8 +1,6 @@
 @import _colors.sass
 @import _mixins.sass
 
-
-
 .container-race
   margin: 0 auto
   display: flex
@@ -46,6 +44,7 @@
       width: 300px
       height: 350px
       margin-left: 10px
+      border: 0.4px solid rgb(227, 227, 227)
       img
         background-repeat: no-repeat
         background-size: cover
@@ -55,6 +54,19 @@
         max-height: 300px
 
 .detail-race
-  margin-top: 100px
+  width: 90%
+  display: flex
+  flex-flow: column
+  align-items: center
+  margin: 0 auto
+  margin-top: 70px
+  margin-bottom: 20px
+  background-color:  $primary-color
+
   img
-    width: 200px
+    margin-top: 20px
+    width: 80%
+  div
+    width: 80%
+    h2
+      font-size: 15px
