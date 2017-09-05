@@ -435,14 +435,12 @@ header label:hover {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
     .container-race .race-box {
       width: 300px;
       height: 350px;
-      margin-left: 10px;
       border: 0.4px solid #e3e3e3; }
       .container-race .race-box img {
         background-repeat: no-repeat;
