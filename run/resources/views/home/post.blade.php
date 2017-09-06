@@ -2,7 +2,7 @@
 <section class="item-posts">
   <!--create publiction -->
   <div class="create-post">
-    <img class="user-img" src="img/users/user-1.jpg" alt="">
+    <img class="user-img" src="img/users/avatar-default.jpg" alt="">
     <form class="form-post" action="{{ route('post.create') }}" method="post">
       <textarea  class="text-form"rows="2" cols="30" placeholder="¿En que estás pensando?" name="body"></textarea>
       <div id="form-files">
@@ -20,7 +20,7 @@
   @foreach ($posts as $post)
 
     <article class="post-container-flex" data-postid="{{ $post->id }}">
-      <img src="img/users/user-2.jpg" alt="" class="user-img">
+      <img src="img/users/avatar-default.jpg" alt="" class="user-img">
       <div class="detail-post">
         <div class="user-info-post">
           <h5><a href="#" class="profile-link">{{ $post->user->name }}</a></h5>

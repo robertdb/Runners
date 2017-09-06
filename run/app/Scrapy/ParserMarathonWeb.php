@@ -38,7 +38,7 @@ class ParserMarathonWeb extends Parser
     $count = 0;
     foreach ($links as $link) {
 
-      echo '...'.$percentage.'%' ;
+      echo '...'.(int)$percentage.'%';
 
       $marathon = new InfoMarathon();
       $marathon->description = null;
@@ -125,7 +125,7 @@ class ParserMarathonWeb extends Parser
       $percentage = ($count * 100) / $totalRaces;
 
     }
-    echo '...100%'
+    echo '...100% ';
     return $races;
 
   }
