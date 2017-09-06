@@ -75,26 +75,47 @@
       background-color: $background-color
       display: flex
       height: auto
-    .detail-post
-      margin-left: 10px
-      display: flex
-      flex-flow: row wrap
-      margin-right: 10px
-      .user-info-post
-        width: 100%
-      .comments-post
-        height: auto
-      .comment-post
-        display: flex
-        background-color: $primary-color
-        margin-top: 10px
-        margin-bottom: 10px
-        .detail-comment-post
-          margin-left: 10px
-          display: flex
-          flex-flow: row wrap
-      .text-comment-post
+      position: relative
+      ul
+        position: absolute
+        right: 5px
+        top: 2px
+        li a
+          color: rgb(161, 161, 161)
+          text-decoration: none
+        li a:hover
+          color: rgb(22, 22, 22)
+        #line
+          margin-left: 1px
+          margin-right: 1px
+          color: rgb(161, 161, 161)
+      .detail-post
         margin-left: 10px
+        display: flex
+        flex-flow: row wrap
+        margin-right: 10px
+        .user-info-post
+          width: 100%
+          p
+            color: rgb(194, 194, 194)
+          h5 a
+            color: rgb(64, 129, 214)
+            text-decoration: none
+          h5 a:hover
+            color: rgb(44, 96, 166)
+        .comments-post
+          height: auto
+        .comment-post
+          display: flex
+          background-color: $primary-color
+          margin-top: 10px
+          margin-bottom: 10px
+          .detail-comment-post
+            margin-left: 10px
+            display: flex
+            flex-flow: row wrap
+        .text-comment-post
+          margin-left: 10px
 
 
 .item-map

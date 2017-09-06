@@ -234,44 +234,65 @@ header label:hover {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      height: auto; }
-    .container-flex .item-posts .detail-post {
-      margin-left: 10px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      margin-right: 10px; }
-      .container-flex .item-posts .detail-post .user-info-post {
-        width: 100%; }
-      .container-flex .item-posts .detail-post .comments-post {
-        height: auto; }
-      .container-flex .item-posts .detail-post .comment-post {
+      height: auto;
+      position: relative; }
+      .container-flex .item-posts .post-container-flex ul {
+        position: absolute;
+        right: 5px;
+        top: 2px; }
+        .container-flex .item-posts .post-container-flex ul li a {
+          color: #a1a1a1;
+          text-decoration: none; }
+        .container-flex .item-posts .post-container-flex ul li a:hover {
+          color: #161616; }
+        .container-flex .item-posts .post-container-flex ul #line {
+          margin-left: 1px;
+          margin-right: 1px;
+          color: #a1a1a1; }
+      .container-flex .item-posts .post-container-flex .detail-post {
+        margin-left: 10px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        background-color: #f5f5f7;
-        margin-top: 10px;
-        margin-bottom: 10px; }
-        .container-flex .item-posts .detail-post .comment-post .detail-comment-post {
-          margin-left: 10px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        margin-right: 10px; }
+        .container-flex .item-posts .post-container-flex .detail-post .user-info-post {
+          width: 100%; }
+          .container-flex .item-posts .post-container-flex .detail-post .user-info-post p {
+            color: #c2c2c2; }
+          .container-flex .item-posts .post-container-flex .detail-post .user-info-post h5 a {
+            color: #4081d6;
+            text-decoration: none; }
+          .container-flex .item-posts .post-container-flex .detail-post .user-info-post h5 a:hover {
+            color: #2c60a6; }
+        .container-flex .item-posts .post-container-flex .detail-post .comments-post {
+          height: auto; }
+        .container-flex .item-posts .post-container-flex .detail-post .comment-post {
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
-      .container-flex .item-posts .detail-post .text-comment-post {
-        margin-left: 10px; }
+          background-color: #f5f5f7;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+          .container-flex .item-posts .post-container-flex .detail-post .comment-post .detail-comment-post {
+            margin-left: 10px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+        .container-flex .item-posts .post-container-flex .detail-post .text-comment-post {
+          margin-left: 10px; }
 
 .item-map {
   display: none; }

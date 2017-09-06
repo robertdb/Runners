@@ -33,7 +33,7 @@
       @if(Auth::user() == $post->user)
         <ul style="list-style:none; display:flex; flex-flow: row">
           <li><a class="edit" href="{{ route('post.edit', ['id' => $post->id]) }}">Editar</a></li>
-          <li>|</li>
+          <li id="line">|</li>
           <li><a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Borrar</a></li>
         </ul>
       @endif
