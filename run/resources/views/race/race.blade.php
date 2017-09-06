@@ -16,8 +16,8 @@
         <div class="address">
           <h2>{{$race->address}}</h2>
         </div>
-        <div >
-          <a href="{{$race->address}}"><h3>Subscribirse</h3></a>
+        <div>
+          <a href="{{$race['subscribe_link']}}"><h3>Subscribirse</h3></a>
         </div>
     </div>
 @endsection
