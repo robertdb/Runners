@@ -11,7 +11,7 @@
       @else
         <li><a href="{{ route('home') }}">Inicio</a></li>
         <li><a href="{{ route('races') }}">Carreras</a></li>
-        <li><a href="amigos.html">Amigos</a></li>
+        <li><a href="{{ route('users_directory') }}">Corredores</a></li>
         <li><a href="/profile">Perfil</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li >

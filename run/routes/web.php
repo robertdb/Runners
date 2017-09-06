@@ -55,8 +55,14 @@ Route::get('/races/{id}', [
 ]);
 
 
-/******* Profile *************/
+/******* Users *************/
 // ruta harcodeada, va recibir un id de usuario
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/users', [
+    'uses' => 'UserController@index',
+    'as' => 'users_directory',
+    'middleware' => 'auth'
+]);
