@@ -1,57 +1,3 @@
-/*$(document).ready(function(){
-
-  var myLatLng = new google.maps.LatLng(-34.603722,-58.381592);
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-         center: myLatLng,
-         zoom: 10
-       });
-
-  function createMarker(myLatLng,icn,name) {
-
-   var marker = new google.maps.Marker(
-     {
-       position: myLatLng,
-       map: map,
-       icon:icn,
-       title: name
-     });
-  }
-
-
-  var request = {
-    location: myLatLng ,
-    radius: '2000',
-    types:['store']
-  };
-
-  service = new google.maps.places.PlacesService(map);
-
-  service.nearbySearch(request, callback);
-
-
-  function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-      for (var i = 0; i < results.length; i++) {
-        var place = results[i];
-        myLatLng = place.geometry.location;
-        icn = {
-            url: "../img/start-marathon.png", // url
-            scaledSize: new google.maps.Size(50, 50), // scaled size
-            origin: new google.maps.Point(0,0), // origin
-            anchor: new google.maps.Point(0, 0) // anchor
-        };
-        name = place.name;
-        createMarker(myLatLng, icn, name);
-      }
-    }
-  }
-
-
-});
-*/
-
-
 // Global variables
 var map;
 var myLatLng;
@@ -80,8 +26,6 @@ $(document).ready(function(){
     myLatLng = new google.maps.LatLng(latval, lngval);
 
     createMap(myLatLng);
-
-    //nearbySearch(myLatLng,'hotel');
 
     searchMarathons(latval,lngval);
 
@@ -120,48 +64,18 @@ $(document).ready(function(){
           icon:icn,
           title: name
         });
-
+    return marker;
   }
 
-  // nearbyserach
-  /*function nearbySearch(myLatLng, type) {
-
-    var request = {
-                    location: myLatLng ,
-                    radius: '2000',
-                    types:[type]
-                  };
-
-    service = new google.maps.places.PlacesService(map);
-
-    service.nearbySearch(request, callback);
-
-    function callback(results, status) {
-
-      if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-          var place = results[i];
-          myLatLng = place.geometry.location;
-          icn = {
-                  url: "../img/start-marathon.png", // url
-                  scaledSize: new google.maps.Size(50, 50), // scaled size
-                  origin: new google.maps.Point(0,0), // origin
-                  anchor: new google.maps.Point(0, 0) // anchor
-                };
-
-          name = place.name;
-
-          createMarker(myLatLng, icn, name);
-
-        }
-      }
-    }
-  }*/
 
   function searchMarathons(lat, lng) {
 
     $.get('http://localhost:8000/api/races',
           function(match){
+
+            var content;
+
+            var mylink;
 
             $.each(match, function(i,val){
 
@@ -174,7 +88,28 @@ $(document).ready(function(){
                       anchor: new google.maps.Point(0, 0) // anchor
                     };
 
-                createMarker(gLatLng, gicn, val.title);
+              mylink = "http://localhost:8000/races/" + val.id;
+              var image = "<img width=100% height=150px src="+val.img+">";
+              var title = "<h5>"+val.title+"</h5>";
+              var date = "<h6>"+val.date+"</h6>"
+              content = "<style>h5{font-family: inherit};</style><div style='width:200px'><a style='text-decoration:none;color:#000000'href="+mylink+">"+image+title+date+"</a></div>";
+              console.log(content);
+
+              infoWindow = new google.maps.InfoWindow({
+                  content: content
+              });
+
+              var marker = createMarker(gLatLng, gicn, val.title);
+
+
+              google.maps.event.addListener(marker, 'click', (function(marker, infoWindow) {
+                  return function() {
+                      if(infoWindow) {
+                          infoWindow.close();
+                      }
+                      infoWindow.open(map, marker);
+                  };
+              })(marker, infoWindow));
 
             });
 

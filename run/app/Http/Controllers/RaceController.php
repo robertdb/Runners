@@ -25,6 +25,12 @@ class RaceController extends Controller
       return $this->getAllRaces();
     }
 
+    public function getRaceJson($id)
+    {
+      $race = InfoMarathon::find($id);
+      return $race;
+    }
+
     public function showRace($id)
     {
       $marathon = InfoMarathon::find($id);

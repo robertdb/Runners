@@ -61,11 +61,30 @@
   margin-top: 70px
   margin-bottom: 20px
   background-color:  $primary-color
-
+  border-radius: 0.5%
   img
     margin-top: 20px
     width: 80%
+    border-radius: 1%
   div
     width: 80%
     h2
       font-size: 15px
+  .map-raceId
+    margin-bottom: 25px
+
+@include desktop
+  .detail-race
+    margin-top: 25px
+    width: 70%
+
+.map-raceId
+  display: block
+  width: 100%
+  height: 400px
+  // map style
+  background-color: $primary-color
+  #map-race
+    display: inline-block
+    width: 100%
+    height: 100%
