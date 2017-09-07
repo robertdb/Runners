@@ -2,13 +2,20 @@
 <section class="item-events">
       <div class="create-event">
         <!--create events-->
-        <strong>Crear evento</strong>
+        <img src="{{ asset('img/create-race.png') }}" width="25px" height="25px"alt="">
+        <spam>Crear carrera</spam>
       </div>
       <div class="my-events">
         <!--event list-->
-        <div class="list-title-events"><strong>Mis eventos</strong></div>
-        <article class="event">Olivos - 9am</article>
-        <article class="event">Lagos de palermo - 20pm</article>
-        <article class="event">Lagos de palermo - 21pm</article>
+        <div class="list-title-events">
+          <img src="{{ asset('img/my-races.png') }}" width="25px" height="25px"alt="">
+          <spam>Mis carreras</spam>
+        </div>
+        <div class="runners-friends">
+          <!--create events-->
+          <img src="{{ asset('img/runners-friends.jpg') }}" width="25px" height="25px"alt="">
+          <spam>Amigos</spam>
+        </div>
+
       </div>
 </section>
