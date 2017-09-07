@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::post('/password/reset', 'Auth\PasswordController@reset');
+
 Auth::routes();
 
 /******* Posts *************/
