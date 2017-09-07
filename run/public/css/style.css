@@ -374,7 +374,7 @@ footer {
       align-items: flex-start;
       border-radius: 5px; }
       .container-flex .item-events .create-event {
-        width: 90%; }
+        width: 100%; }
       .container-flex .item-events .runners-friends {
         margin-top: 10px; }
         .container-flex .item-events .runners-friends img {
@@ -399,9 +399,9 @@ footer {
           margin-top: 10px; }
     .container-flex .item-posts {
       -webkit-box-flex: 1;
-      -webkit-flex: 1 1 120%;
-      -ms-flex: 1 1 120%;
-      flex: 1 1 120%;
+      -webkit-flex: 1 1 110%;
+      -ms-flex: 1 1 110%;
+      flex: 1 1 110%;
       background-color: #f5f5f7;
       padding: 10px;
       margin: 10px; }

@@ -3,7 +3,7 @@
       <div class="create-event">
         <!--create events-->
         <img src="{{ asset('img/create-race.png') }}" width="25px" height="25px"alt="">
-        <spam>Crear carrera</spam>
+        <spam>Nueva carrera</spam>
       </div>
       <div class="my-events">
         <!--event list-->
