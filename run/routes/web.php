@@ -66,3 +66,8 @@ Route::get('/users', [
     'as' => 'users_directory',
     'middleware' => 'auth'
 ]);
+
+/******* FAQ *************/
+Route::get('/help', function () {
+    return view('faq');
+});

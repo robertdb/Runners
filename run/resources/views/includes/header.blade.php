@@ -13,7 +13,7 @@
         <li><a href="{{ route('races') }}">Carreras</a></li>
         <li><a href="{{ route('users_directory') }}">Corredores</a></li>
         <li><a href="/profile">Perfil</a></li>
-        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="/help">FAQ</a></li>
         <li >
             <a href="">
                 {{ Auth::user()->name }}
